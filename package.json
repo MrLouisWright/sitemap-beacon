@@ -1,0 +1,55 @@
+{
+  "name": "sitemap-beacon",
+  "version": "1.0.0",
+  "description": "Audit XML sitemaps against your built static site: size limits, invalid or other-host URLs, URLs that are missing, noindex or non-canonical, invalid/future/stale/uniform lastmod, and indexable pages missing from the sitemap. Text/JSON/SARIF/Markdown, allowlist with expiry, GitHub Action. Zero deps.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "sitemap-beacon": "bin/sitemap-beacon.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "action.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "sitemap",
+    "xml-sitemap",
+    "sitemap-index",
+    "lastmod",
+    "indexing",
+    "crawl",
+    "seo",
+    "static-site",
+    "html",
+    "sarif",
+    "github-action"
+  ],
+  "author": "Louis Wright <hello@louiswright.co.uk> (https://github.com/MrLouisWright)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLouisWright/sitemap-beacon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrLouisWright/sitemap-beacon/issues"
+  },
+  "homepage": "https://github.com/MrLouisWright/sitemap-beacon#readme"
+}
