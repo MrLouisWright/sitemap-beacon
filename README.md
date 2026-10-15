@@ -1,5 +1,7 @@
 # sitemap-beacon
 
+[![npm version](https://img.shields.io/npm/v/sitemap-beacon.svg)](https://www.npmjs.com/package/sitemap-beacon) [![CI](https://github.com/MrLouisWright/sitemap-beacon/actions/workflows/ci.yml/badge.svg)](https://github.com/MrLouisWright/sitemap-beacon/actions/workflows/ci.yml) [![Node](https://img.shields.io/node/v/sitemap-beacon.svg)](https://nodejs.org) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > Audit XML sitemaps against your built static site: every URL should be a real, indexable, canonical page, and every such page should be listed.
 
 Sitemaps drift away from the site they describe. A page gets `noindex` but stays in the sitemap. A post is canonicalised to its new URL, but the old one is still listed. The build stamps every `lastmod` with the deploy time, so Google stops trusting the dates. A section is added and never makes it into the sitemap. `sitemap-beacon` reads your sitemaps (indexes, children and `.xml.gz`) alongside the built HTML and checks each one against the other. It reports the file, line, severity and a **concrete fix**, before you deploy.
