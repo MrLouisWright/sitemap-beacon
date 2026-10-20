@@ -1,6 +1,6 @@
 {
   "name": "sitemap-beacon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Audit XML sitemaps against your built static site: size limits, invalid or other-host URLs, URLs that are missing, noindex or non-canonical, invalid/future/stale/uniform lastmod, and indexable pages missing from the sitemap. Text/JSON/SARIF/Markdown, allowlist with expiry, GitHub Action. Zero deps.",
   "type": "module",
   "main": "./src/index.js",
