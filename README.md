@@ -86,7 +86,7 @@ HIGH     sitemap-pages.xml:14 https://example.com/search?q=a&b=c has no page in 
 ## Options
 
 ```text
-sitemap-beacon 1.0.0 — audit XML sitemaps against your built static site
+sitemap-beacon 1.0.1 — audit XML sitemaps against your built static site
 
 Usage: sitemap-beacon [site-dir] [options]
 
@@ -180,12 +180,20 @@ The action runs the bundled CLI with Node 20; it has no dependencies to install.
 
 ## Library
 
+Install it in your project first:
+
+```bash
+npm install --save-dev sitemap-beacon
+```
+
 ```js
 import { check, parseSitemap } from 'sitemap-beacon';
 const report = check('dist', { maxAgeDays: 365 });
 console.log(report.info.sitemaps, report.info.urls);
 parseSitemap(xml).entries; // [{ loc, lastmod, changefreq, priority, line }]
 ```
+
+The package is ESM-only (there is no CommonJS build): use `import`, or `await import("sitemap-beacon")` from CommonJS.
 
 Types are included.
 
